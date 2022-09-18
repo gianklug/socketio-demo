@@ -1,0 +1,12 @@
+<script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+<script>
+	var socket = io();
+	socket.on('message', function(message) {
+		// Change the background color on socket message receive
+		document.getElementById("a").style = `height: 100%; width: 100%; background-color: #${message}`;
+	});
+</script>
+
+<body id="a" style="height: 100%; width: 100%;">
+	<!-- Dummy body element -->
+</body>
